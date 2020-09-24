@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="home.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto:100,400,900" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" 
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+     crossorigin="anonymous">
+    <script src="/js/home.js"></script>
+     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+     <script>
+         $(document).ready(function(){
+             $(".btn").click(function(){
+                 $("#myModal").modal('show');
+             });
+
+         });
+     </script>
+
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+
+<body>
+  
+    <nav class="navbar" >
+        <a class="navbar-brand"></a>
+        <form class="form-inline">
+          <input class="form-control mr-sm-2" type="search" placeholder="Search for a Lecture" aria-label="Search">
+          <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Search</button>
+        </form>
+      </nav>
+
+    <p id="header">Your Courses</p>
+    
+   
+   
+
+    <div id="myBtnContainer">
+      <ul class="nav justify-content-center">
+        <li class="nav-item" style="size: 30px;">
+          <a class="nav-link active" href="#" onclick="filterSelection('all')">All</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#" onclick="filterSelection('ml')" >Machine Learning</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#" onclick="filterSelection('software')">Software Enginering</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="#" onclick="filterSelection('js')">Nodejs</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="#" onclick="filterSelection('numpy')">Numpy</a>
+        </li>
+      </ul>
+      <br>
+    </div>
+    
+    <div class="container">
+
+
+        <div class="row">
+
+          <div class="col">
+            <div class="filterDiv ml">
+            <div class="card" style="width: 18rem;">
+                <img class="card-img-top" src="img/1.jpg" alt="Card image cap">
+                <div class="card-body" style="background-color: #a5a2a2;">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">44:55 min.</p>
+                  <button type="button" class="btn btn-primary" data-toggle="modal">Watch Video</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="filterDiv ml">
+            <div class="card" style="width: 18rem;">
+                <img class="card-img-top" src="img/2.jpg" alt="Card image cap">
+                <div class="card-body" style="background-color: #a5a2a2;">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">44:55 min.</p>
+                  <a href="#" class="btn btn-primary" data-toggle="modal">Watch Video</a>
+                </div>
+              </div>
+          </div>
+          </div>
+
+          <div class="col">
+            <div class="filterDiv ml">
+            <div class="card" style="width: 18rem;">
+                <img class="card-img-top" src="img/3.jpg" alt="Card image cap">
+                <div class="card-body" style="background-color: #a5a2a2;">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">44:55 min.</p>
+                  <a href="#" class="btn btn-primary" data-toggle="modal">Watch Video</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          
+
+        </div>
+        
+        <div class="row" style="margin-top: 2%;">
+
+            <div class="col">
+              <div class="filterDiv js">
+              <div class="card" style="width: 18rem;">
+                  <img class="card-img-top" src="img/4.jpg" alt="Card image cap">
+                  <div class="card-body" style="background-color: #a5a2a2;">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">44:55 min.</p>
+                    <a href="#" class="btn btn-primary" data-toggle="modal">Watch Video</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+  
+            <div class="col">
+              <div class="filterDiv software">
+              <div class="card" style="width: 18rem;">
+                  <img class="card-img-top" src="img/5.jpg" alt="Card image cap">
+                  <div class="card-body" style="background-color: #a5a2a2;">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">44:55 min.</p>
+                    <a href="#" class="btn btn-primary" data-toggle="modal">Watch Video</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+  
+            <div class="col">
+              <div class="filterDiv numpy">
+              <div class="card" style="width: 18rem;">
+                  <img class="card-img-top" src="img/6.jpg" alt="Card image cap">
+                  <div class="card-body" style="background-color: #a5a2a2;">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">44:55 min.</p>
+                    <a href="#" class="btn btn-primary" data-toggle="modal">Watch Video</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+  
+            
+  
+          </div>
+
+      </div>
+      
+<!-- Modal HTML -->
+<div id="myModal" class="modal fade" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered modal-xl" >
+      <div class="modal-content">
+          <div class="modal-header">
+              <h5 class="modal-title"></h5>
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+          </div>
+          <div class="modal-body">
+            <iframe width="1100" height="500" src="https://www.youtube.com/embed/tgbNymZ7vqY">
+            </iframe>
+          </div>
+          <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+              
+          </div>
+      </div>
+  </div>
+</div>
+
+
+      <footer>
+        <p><bold>©2020 . All Rights Reserved.</bold></p>
+    </footer>
+    
+</body>
+</html>
